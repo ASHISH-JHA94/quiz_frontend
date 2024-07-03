@@ -6,7 +6,7 @@ export default function ResultTable() {
     const [data, setData] = useState([])
 
     useEffect(() => {
-        getServerData(`http://localhost:8080/api/result`, (res) => {
+        getServerData(`https://quiz-backend-alpha-inky.vercel.app/api/result`, (res) => {
             console.log(res);
             setData(res)
         })

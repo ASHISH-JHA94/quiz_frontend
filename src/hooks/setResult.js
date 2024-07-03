@@ -24,7 +24,7 @@ export const usePublishResult = (resultData) => {
     if (Array.isArray(result) && result.length > 0 && username) {
         (async () => {
             try {
-                await postServerData(`http://localhost:8080/api/result`, resultData, data => {
+                await postServerData(`https://quiz-backend-alpha-inky.vercel.app/api/result`, resultData, data => {
                     console.log('Result published successfully:', data);
                 });
             } catch (error) {

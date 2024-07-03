@@ -14,7 +14,7 @@ export const useFetchQuestion = () => {
         const fetchData = async () => {
             setGetData(prev => ({ ...prev, isLoading: true }));
             try {
-                const [{ questions, answers }] = await getServerData(`http://localhost:8080/api/questions`, (data) => data);
+                const [{ questions, answers }] = await getServerData(`https://quiz-backend-alpha-inky.vercel.app/api/questions`, (data) => data);
 
                 if (questions.length > 0) {
                     setGetData({ isLoading: false, apiData: questions, serverError: null });
